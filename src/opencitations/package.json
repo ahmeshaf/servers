@@ -1,0 +1,47 @@
+{
+  "name": "@ahmeshaf/mcp-server-opencitations",
+  "version": "0.1.5",
+  "description": "MCP server for OpenCitations API",
+  "license": "MIT",
+  "author": "ahmeshaf",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "opencitations",
+    "citations",
+    "api"
+  ],
+  "homepage": "https://github.com/ahmeshaf/servers/tree/main/src/opencitations",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmeshaf/servers.git",
+    "directory": "src/opencitations"
+  },
+  "type": "module",
+  "bin": {
+    "mcp-server-opencitations": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@vitest/coverage-v8": "^2.1.8",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.2",
+    "vitest": "^2.1.8"
+  }
+}
